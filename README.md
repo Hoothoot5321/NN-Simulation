@@ -6,7 +6,7 @@ Hoved programmet er **NN Simulation.exe**
 
 Datasættet der bruges er (Standard OCR dataset)[https://www.kaggle.com/datasets/preatcher/standard-ocr-dataset]
 
-Den er splittet i to dele, en udelukkende med tallene, og en med bogstaverne.
+Den er splittet i to dele, en udelukkende med tallene, og en med tal og bogstaver.
 
 Programmet er temmligt ressource krævene, og kan tage op til 4gb ram.
 
