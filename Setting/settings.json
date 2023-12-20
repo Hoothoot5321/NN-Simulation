@@ -1,0 +1,71 @@
+{
+    "Kommentar1":"training_acc er om og nøjagtigheden skal testes med trænings dataet eller test dataet. false er test data, true er trænings data.",
+    "Kommentar2":"du kan tilføje så mange trænings sæt som du har løst. bare kopiere det inde i {} i neuron_settings og sæt det ind i []",
+    "Kommantar3":"act_f er aktiverings funktionen. der kan vælges mellem(relu),(sigmoid) og (tanh)",
+    "Kommentar4":"softmax er om programmet skal bruge softmax som output lag",
+    "Kommentar5":"hvis programmet kører langsomt så prøv at fjerne nogle trænings sæt eller sæt training_acc til false",
+    "iterations":10000,
+    "batch_size":1,
+    "b_r":200,
+    "b_g":200,
+    "b_b":200,
+    "neuron_settings":[
+        {
+            "layers":2,
+            "neurons":50,
+            "learning_rate":0.01,
+            "test_file":"Med_bogstaver/num_c_test.csv",
+            "train_file":"Med_bogstaver/num_c_train.csv",
+            "title":"Bogstaver relu",
+            "r":255.0,
+            "b":125.0,
+            "g":125.0,
+            "training_acc":false,
+            "act_f":"relu",
+            "softmax":true
+        },
+        {
+            "layers":2,
+            "neurons":50,
+            "learning_rate":0.001,
+            "test_file":"Med_bogstaver/num_c_test.csv",
+            "train_file":"Med_bogstaver/num_c_train.csv",
+            "title":"Bogstaver relu ln 0.001",
+            "r":255.0,
+            "b":125.0,
+            "g":255.0,
+            "training_acc":false,
+            "act_f":"relu",
+            "softmax": true 
+        },
+        {
+            "layers":2,
+            "neurons":50,
+            "learning_rate":0.01,
+            "test_file":"Med_bogstaver/num_c_test.csv",
+            "train_file":"Med_bogstaver/num_c_train.csv",
+            "title":"Bogstav sigmoid",
+            "r":125.0,
+            "b":255.0,
+            "g":125.0,
+            "training_acc":false,
+            "act_f":"sigmoid",
+            "softmax":true
+        },
+        {
+            "layers":2,
+            "neurons":50,
+            "learning_rate":0.01,
+            "test_file":"Kun_tal/test_tal.csv",
+            "train_file":"Kun_tal/train_tal.csv",
+            "title":"Tal ln på 0.01 relu",
+            "r":255.0,
+            "b":255.0,
+            "g":125.0,
+            "training_acc":false,
+            "act_f":"relu",
+            "softmax":true
+
+        }
+    ]
+}
