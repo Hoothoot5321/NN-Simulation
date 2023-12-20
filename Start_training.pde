@@ -1,6 +1,7 @@
-float start_training(Network netværk, InputSvarHolder holder, int iterations, IntList rand_batch, boolean training_acc) {
+float start_training(Network netværk, InputSvarHolder holder, int iterations, IntList rand_batch, boolean training_acc, int batch_size) {
   int answer_amount = holder.test_svar[0].length;
   int input_amount = holder.test_input[0].length;
+  float f_batch_size = float(batch_size);
 
   for (int iteration = 0; iteration< iterations; iteration++) {
 

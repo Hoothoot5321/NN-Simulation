@@ -47,6 +47,7 @@ class Setting {
   boolean training_acc;
   String act_f;
   boolean softmax;
+  int batch_size;
   Setting(JSONObject json) {
          this.layers = json.getInt("layers");
          this.neurons = json.getInt("neurons");
@@ -60,6 +61,7 @@ class Setting {
          this.training_acc = json.getBoolean("training_acc");
          this.act_f = json.getString("act_f");
          this.softmax = json.getBoolean("softmax");
+         this.batch_size = json.getInt("batch_size");
   }
   
 }

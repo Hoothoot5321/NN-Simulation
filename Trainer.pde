@@ -7,7 +7,8 @@ class Trainer {
   String title;
   color col;
   boolean training_acc;
-  Trainer(InputSvarHolder holder, int layers, int neurons, float learning_rate, String title, color col, boolean training_acc, Act_func act_f,boolean softmax) {
+  int batch_size;
+  Trainer(InputSvarHolder holder, int layers, int neurons, float learning_rate, String title, color col, boolean training_acc, Act_func act_f,boolean softmax,int batch_size) {
     Neuron[][] all_layers = gen_all_layers(neurons, layers, holder.test_input[0].length, holder.test_svar[0].length);
 
     this.training_acc = training_acc;
@@ -23,6 +24,7 @@ class Trainer {
     this.rand_batch = temp_bathc;
     this.iterations = cycle_out;
     this.title = title;
+    this.batch_size = batch_size;
   }
 
   Trainer(Setting setting, InputSvarHolder holder) {
@@ -53,9 +55,10 @@ class Trainer {
     this.rand_batch = temp_bathc;
     this.iterations = cycle_out;
     this.title = setting.title;
+    this.batch_size = setting.batch_size;
   }
 
   float train() {
-    return start_training(this.netværk, this.holder, this.iterations, this.rand_batch, this.training_acc);
+    return start_training(this.netværk, this.holder, this.iterations, this.rand_batch, this.training_acc,this.batch_size);
   }
 }

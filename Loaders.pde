@@ -47,7 +47,6 @@ MultiTrainer load_settings(String setting_file) {
 
   JSONObject json = loadJSONObject(setting_file);
   iterations = json.getInt("iterations");
-  batch_size = json.getInt("batch_size");
   b_r = json.getFloat("b_r");
   b_g = json.getFloat("b_g");
   b_b = json.getFloat("b_b");

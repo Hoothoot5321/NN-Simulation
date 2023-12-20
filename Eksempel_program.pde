@@ -6,8 +6,7 @@ float w_ratio;
 int iterations = 0;
 int iteration = 0;
 int cycle_out = 10;
-int batch_size = 1;
-float f_batch_size;
+
 
 MultiTrainer main_trainer;
 boolean err = false;
@@ -30,7 +29,7 @@ void setup() {
 
   h_ratio = float(height)/100.0;
   w_ratio = float(width-box_size)/(iterations/cycle_out);
-  f_batch_size = float(batch_size);
+
   noStroke();
 }
 
