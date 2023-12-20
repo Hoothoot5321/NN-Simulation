@@ -1,5 +1,5 @@
 float[] one_hot_lab_num(int row_n, int max, Table csv_table) {
-  float label = csv_table.getFloat(row_n, "Labels");
+  float label = csv_table.getFloat(row_n, 0);
   float[] one_hotted = one_hot(label, max);
   return one_hotted;
 }
